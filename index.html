@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mova - Seja Motorista e Viaje com Qualidade</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header Section -->
+    <header class="bg-yellow-400 shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+                <a href="index.html" class="inline-block">
+                <img 
+                    src="Mova_Logotipo_02.png" 
+                    alt="Logo Mova" 
+                    class="h-8 w-auto rounded-lg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/100x32/000000/FFFFFF?text=MOVA';"
+                />
+            </a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="text-black hover:text-white font-semibold">Início</a></li>
+                    <li><a href="seja-motorista.html" class="text-black hover:text-white font-semibold">Seja Motorista</a></li>
+                    <li><a href="seja-passageiro.html" class="text-black hover:text-white font-semibold">Viaje com o Mova</a></li>
+                    <li><a href="contato.html" class="text-black hover:text-white font-semibold">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="bg-yellow-400 py-20 rounded-b-lg">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h1 class="text-4xl lg:text-6xl font-bold text-black mb-6 rounded-lg">
+                            Seja motorista Mova e ponha mais dinheiro no bolso!
+                        </h1>
+                        <p class="text-xl text-black mb-8 rounded-lg">
+                            Aqui o motorista é dono do seu próprio horário.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                            <a 
+                                href="/seja-motorista" 
+                                class="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors text-center"
+                            >
+                                Seja motorista
+                            </a>
+                            <a 
+                                href="/seja-passageiro" 
+                                class="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center border-2 border-black"
+                            >
+                                Viaje com o Mova
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <!-- Placeholder for main hero image -->
+                        <img 
+                            src="https://revistacarro.com.br/wp-content/uploads/2023/12/Mercedes.jpg" 
+                            alt="Motorista Mova" 
+                            class="rounded-lg shadow-xl"
+                            onerror="this.onerror=null;this.src='https://placehold.co/500x400/FFD700/000000?text=IMAGEM+INDISPON%C3%8DVEL';"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Passageiro Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img 
+                            src="https://revistacarro.com.br/wp-content/uploads/2023/12/Mercedes.jpg" 
+                            alt="Passageiro Mova" 
+                            class="rounded-lg shadow-lg"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x300/F3F4F6/6B7280?text=IMAGEM+INDISPON%C3%8DVEL';"
+                        />
+                    </div>
+                    <div>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-black mb-6">
+                            Passageiro Mova viaja com qualidade pelo melhor preço!
+                        </h2>
+                        <p class="text-lg text-gray-700 mb-8">
+                            Baixe o app e comece a viajar com segurança e economia.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#" class="inline-block">
+                                <img 
+                                    src="https://placehold.co/150x50/000000/FFFFFF?text=App+Store" 
+                                    alt="Download na App Store" 
+                                    class="hover:opacity-80 transition-opacity rounded-lg"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/150x50/000000/FFFFFF?text=APP+STORE+INDISPON%C3%8DVEL';"
+                                />
+                            </a>
+                            <a href="#" class="inline-block">
+                                <img 
+                                    src="https://placehold.co/150x50/000000/FFFFFF?text=Google+Play" 
+                                    alt="Download no Google Play" 
+                                    class="hover:opacity-80 transition-opacity rounded-lg"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/150x50/000000/FFFFFF?text=GOOGLE+PLAY+INDISPON%C3%8DVEL';"
+                                />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Liberdade Financeira Section -->
+        <section class="py-16 bg-black text-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+                            Conquiste a sua liberdade financeira com Mova
+                        </h2>
+                        <p class="text-xl mb-6">
+                            Você só paga a mensalidade, sem repasse de porcentagem.
+                        </p>
+                        <p class="text-lg mb-8 text-gray-300">
+                            Não importa para onde você quer se mover. Vai de Mova!
+                        </p>
+                        <a 
+                            href="seja-motorista.html" 
+                            class="bg-yellow-500 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors inline-block"
+                        >
+                            Seja Motorista
+                        </a>
+                    </div>
+                    <div>
+                        <img 
+                            src="https://placehold.co/500x400/1F2937/FFFFFF?text=IMAGEM+ILUSTRATIVA+FINANCEIRA" 
+                            alt="Liberdade Financeira" 
+                            class="rounded-lg shadow-xl"
+                            onerror="this.onerror=null;this.src='https://placehold.co/500x400/1F2937/FFFFFF?text=IMAGEM+INDISPON%C3%8DVEL';"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Por que ser motorista Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 text-black">
+                    Porque ser motorista Mova é melhor?
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <img 
+                            src="https://placehold.co/200x150/FFD700/000000?text=PRECOS+ACESSIVEIS" 
+                            alt="Preços Acessíveis" 
+                            class="mx-auto mb-4 rounded-lg"
+                            onerror="this.onerror=null;this.src='https://placehold.co/200x150/FFD700/000000?text=IMAGEM+INDISPON%C3%8DVEL';"
+                        />
+                        <h3 class="text-xl font-semibold mb-2">Preços Mais Acessíveis</h3>
+                        <p class="text-gray-600">Tarifas justas para motoristas e passageiros</p>
+                    </div>
+                    <div class="text-center">
+                        <img 
+                            src="https://placehold.co/200x150/FFD700/000000?text=APOIE+TRABALHO" 
+                            alt="Apoie Quem Trabalha" 
+                            class="mx-auto mb-4 rounded-lg"
+                            onerror="this.onerror=null;this.src='https://placehold.co/200x150/FFD700/000000?text=IMAGEM+INDISPON%C3%8DVEL';"
+                        />
+                        <h3 class="text-xl font-semibold mb-2">Apoie Quem Trabalha de Verdade</h3>
+                        <p class="text-gray-600">100% do lucro das corridas fica com você</p>
+                    </div>
+                    <div class="text-center">
+                        <img 
+                            src="https://placehold.co/200x150/FFD700/000000?text=SEM+REPASSE" 
+                            alt="Sem Repasse" 
+                            class="mx-auto mb-4 rounded-lg"
+                            onerror="this.onerror=null;this.src='https://placehold.co/200x150/FFD700/000000?text=IMAGEM+INDISPON%C3%8DVEL';"
+                        />
+                        <h3 class="text-xl font-semibold mb-2">Sem Repasse de Porcentagem</h3>
+                        <p class="text-gray-600">Pague apenas a mensalidade fixa</p>
+                    </div>
+                    <div class="text-center">
+                        <img 
+                            src="https://placehold.co/200x150/FFD700/000000?text=FLEXIBILIDADE" 
+                            alt="Flexibilidade" 
+                            class="mx-auto mb-4 rounded-lg"
+                            onerror="this.onerror=null;this.src='https://placehold.co/200x150/FFD700/000000?text=IMAGEM+INDISPON%C3%8DVEL';"
+                        />
+                        <h3 class="text-xl font-semibold mb-2">Flexibilidade Total</h3>
+                        <p class="text-gray-600">Você é dono do seu próprio horário</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Corridas para todos os estilos -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 text-black">
+                    Corridas para Todos os Estilos
+                </h2>
+                <div class="flex justify-center">
+                    <img 
+                        src="https://placehold.co/800x400/F3F4F6/6B7280?text=IMAGEM+ILUSTRATIVA+CORRIDAS" 
+                        alt="Corridas para Todos os Estilos" 
+                        class="rounded-lg shadow-xl max-w-full"
+                        onerror="this.onerror=null;this.src='https://placehold.co/800x400/F3F4F6/6B7280?text=IMAGEM+INDISPON%C3%8DVEL';"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!-- Movimento Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-8 text-black">
+                        Você faz parte de um movimento
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                        Mova é um app de mobilidade urbana que preza pelo melhor custo x benefício em 
+                        suas corridas e você, motorista Mova, paga apenas a mensalidade pelo uso do app e 
+                        gerencia as suas corridas. Todo o lucro das corridas fica 100% com você!
+                    </p>
+                    <a 
+                        href="/seja-motorista" 
+                        class="bg-yellow-500 text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-400 transition-colors inline-block text-lg"
+                    >
+                        Seja Motorista
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- Footer Section -->
+    <!-- Início da seção do rodapé -->
+    <footer class="bg-black text-gray-300 py-8">
+        <!-- Você pode mudar a cor de fundo alterando a classe 'bg-gray-800' acima. Por exemplo: 'bg-black' ou 'bg-blue-900' -->
+        <div class="container mx-auto px-4 text-center">
+            <!-- Navegação do rodapé -->
+            <nav class="mb-8">
+                <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-lg font-semibold">
+                    <li><a href="index.html" class="hover:text-white transition-colors">Home</a><span class="ml-6 text-gray-500">|</span></li>
+                    <li><a href="quem-somos.html" class="hover:text-white transition-colors">Quem Somos</a><span class="ml-6 text-gray-500">|</span></li>
+                    <li><a href="seja-motorista.html" class="hover:text-white transition-colors">Seja Motorista</a><span class="ml-6 text-gray-500">|</span></li>
+                    <li><a href="/seja-passageiro.html" class="hover:text-white transition-colors">Seja Passageiro</a><span class="ml-6 text-gray-500">|</span></li>
+                    <li><a href="index.html" class="hover:text-white transition-colors">Termos de Uso</a><span class="ml-6 text-gray-500">|</span></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Privacidade</a><span class="ml-6 text-gray-500">|</span></li>
+                    <li><a href="#" class="hover:text-white transition-colors">FAQ</a><span class="ml-6 text-gray-500">|</span></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-6">
+                <!-- Baixe o app -->
+                <div class="flex items-center gap-4">
+                    <span class="text-lg">Baixe o app:</span>
+                    <a href="#" class="inline-block">
+                        <img 
+                            src="https://placehold.co/30x30/000000/FFFFFF?text=🍎" 
+                            alt="App Store" 
+                            class="w-8 h-8 hover:opacity-80 transition-opacity rounded-lg"
+                            onerror="this.onerror=null;this.src='https://placehold.co/30x30/000000/FFFFFF?text=APP';"
+                        />
+                    </a>
+                    <a href="#" class="inline-block">
+                        <img 
+                            src="https://placehold.co/30x30/000000/FFFFFF?text=▶" 
+                            alt="Google Play" 
+                            class="w-8 h-8 hover:opacity-80 transition-opacity rounded-lg"
+                            onerror="this.onerror=null;this.src='https://placehold.co/30x30/000000/FFFFFF?text=PLAY';"
+                        />
+                    </a>
+                </div>
+
+                <!-- Siga nas redes sociais -->
+                <div class="flex items-center gap-4">
+                    <span class="text-lg">Siga o Mova nas redes sociais:</span>
+                    <a href="#" class="inline-block">
+                        <img 
+                            src="https://placehold.co/30x30/000000/FFFFFF?text=📷" 
+                            alt="Instagram" 
+                            class="w-8 h-8 hover:opacity-80 transition-opacity rounded-lg"
+                            onerror="this.onerror=null;this.src='https://placehold.co/30x30/000000/FFFFFF?text=INSTA';"
+                        />
+                    </a>
+                    <a href="#" class="inline-block">
+                        <img 
+                            src="https://placehold.co/30x30/000000/FFFFFF?text=👍" 
+                            alt="Facebook" 
+                            class="w-8 h-8 hover:opacity-80 transition-opacity rounded-lg"
+                            onerror="this.onerror=null;this.src='https://placehold.co/30x30/000000/FFFFFF?text=FACE';"
+                        />
+                    </a>
+                    <a href="#" class="inline-block">
+                        <img 
+                            src="https://placehold.co/30x30/000000/FFFFFF?text=🔗" 
+                            alt="LinkedIn" 
+                            class="w-8 h-8 hover:opacity-80 transition-opacity rounded-lg"
+                            onerror="this.onerror=null;this.src='https://placehold.co/30x30/000000/FFFFFF?text=LINK';"
+                        />
+                    </a>
+                </div>
+
+                <!-- Copyright -->
+                <p class="text-lg">&copy; 2025 MOVA Tecnologia Ltda.</p>
+            </div>
+
+            <!-- Logo Mova no rodapé -->
+            <div class="mt-8">
+                <img 
+                    src="Mova_Logotipo_01.png" 
+                    alt="Logo Mova" 
+                    class="mx-auto h-12 w-auto rounded-lg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/150x50/000000/FFFFFF?text=MOVA+LOGO';"
+                />
+                <!-- Você pode mudar a cor da fonte alterando a classe 'text-gray-300' na tag 'footer' ou diretamente nas tags de texto dentro do rodapé. Por exemplo: 'text-white' ou 'text-yellow-400' -->
+            </div>
+        </div>
+    </footer>
+    <!-- Fim da seção do rodapé -->
+
+</body>
+</html>
