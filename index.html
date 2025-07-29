@@ -11,24 +11,48 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            padding-top: 64px; /* Adiciona padding ao body para compensar o header fixo */
+        }
+        /* Estilo para um efeito sutil de "levantar" a imagem */
+        .lift-effect {
+            transform: translateY(-0.5rem); /* Move a imagem ligeiramente para cima */
+            transition: transform 0.3s ease-out; /* Adiciona uma transição suave */
+        }
+        /* Esconde a barra de navegação móvel por padrão */
+        .mobile-nav-menu {
+            display: none;
+        }
+        /* Mostra a barra de navegação móvel quando a classe 'open' está presente */
+        .mobile-nav-menu.open {
+            display: flex;
         }
     </style>
     <link rel="icon" type="image/png" href="imgs/Mova_Icone_02.png">
 </head>
 <body class="min-h-screen flex flex-col">
 
-    <!-- Header Section -->
-    <header class="bg-yellow-400 shadow-md py-4">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-                <a href="index.html" class="inline-block">
+    <!-- Header Section - Ajustado para ser responsivo e fixo -->
+    <header class="bg-yellow-400 shadow-md py-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 flex items-center justify-between lg:justify-between">
+            <!-- Logo Mova (centralizada em mobile, à esquerda em desktop) -->
+            <a href="index.html" class="inline-block flex-grow lg:flex-grow-0 text-center lg:text-left">
                 <img 
                     src="Mova_Logotipo_02.png" 
                     alt="Logo Mova" 
-                    class="h-8 w-auto"
+                    class="h-8 w-auto mx-auto lg:mx-0"
                     onerror="this.onerror=null;this.src='https://placehold.co/100x32/000000/FFFFFF?text=MOVA';"
                 />
             </a>
-            <nav>
+            
+            <!-- Botão do menu hamburguer para mobile -->
+            <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-black">
+                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <!-- Navegação para desktop -->
+            <nav class="hidden lg:block">
                 <ul class="flex space-x-6">
                     <li><a href="#" class="text-black hover:text-white font-semibold">Início</a></li>
                     <li><a href="seja-motorista.html" class="text-black hover:text-white font-semibold">Seja Motorista</a></li>
@@ -37,10 +61,20 @@
                 </ul>
             </nav>
         </div>
+
+        <!-- Menu de navegação para mobile (oculto por padrão) -->
+        <nav id="mobile-menu" class="mobile-nav-menu flex-col items-center bg-yellow-400 w-full py-4 lg:hidden">
+            <ul class="flex flex-col space-y-4">
+                <li><a href="#" class="text-black hover:text-white font-semibold text-lg py-2 block">Início</a></li>
+                <li><a href="seja-motorista.html" class="text-black hover:text-white font-semibold text-lg py-2 block">Seja Motorista</a></li>
+                <li><a href="seja-passageiro.html" class="text-black hover:text-white font-semibold text-lg py-2 block">Viaje com o Mova</a></li>
+                <li><a href="contato.html" class="text-black hover:text-white font-semibold text-lg py-2 block">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main class="flex-grow">
-       <!-- Hero Section -->
+        <!-- Hero Section -->
         <section class="bg-yellow-400 py-20 rounded-b-lg">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -135,7 +169,7 @@
             </div>
         </section>
 
-               <!-- Por que ser motorista Section - Atualizada para corresponder à imagem -->
+        <!-- Por que ser motorista Section - Atualizada para corresponder à imagem -->
         <section class="py-16 bg-white text-black">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -184,7 +218,7 @@
             </div>
         </section>
 
-                <!-- Pricing Section - Nova 3ª seção baseada na imagem com 4 planos -->
+        <!-- Pricing Section - Nova 3ª seção baseada na imagem com 4 planos -->
         <section class="py-16 bg-white text-black text-center">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl lg:text-4xl font-bold mb-4">
@@ -353,5 +387,18 @@
     </footer>
     <!-- Fim da seção do rodapé -->
 
+    <script>
+        // JavaScript para o menu hamburguer
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('open');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
