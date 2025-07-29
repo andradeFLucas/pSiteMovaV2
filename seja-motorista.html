@@ -11,215 +11,185 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            padding-top: 64px; /* Adiciona padding ao body para compensar o header fixo */
+        }
+        /* Estilo para um efeito sutil de "levantar" a imagem */
+        .lift-effect {
+            transform: translateY(-0.5rem); /* Move a imagem ligeiramente para cima */
+            transition: transform 0.3s ease-out; /* Adiciona uma transição suave */
+        }
+        /* Esconde a barra de navegação móvel por padrão */
+        .mobile-nav-menu {
+            display: none;
+        }
+        /* Mostra a barra de navegação móvel quando a classe 'open' está presente */
+        .mobile-nav-menu.open {
+            display: flex;
         }
     </style>
+    <link rel="icon" type="image/png" href="imgs/Mova_Icone_02.png">
 </head>
 <body class="min-h-screen flex flex-col">
 
-    <!-- Header Section (Placeholder) -->
-    <header class="bg-white shadow-md py-4">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold text-black">Mova</a>
-            <nav>
+    <!-- Header Section - Reutilizado do site principal -->
+    <header class="bg-yellow-400 shadow-md py-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 flex items-center justify-between lg:justify-between">
+            <!-- Logo Mova (centralizada em mobile, à esquerda em desktop) -->
+            <a href="index.html" class="inline-block flex-grow lg:flex-grow-0 text-center lg:text-left">
+                <img 
+                    src="Mova_Logotipo_02.png" 
+                    alt="Logo Mova" 
+                    class="h-8 w-auto mx-auto lg:mx-0"
+                    onerror="this.onerror=null;this.src='https://placehold.co/100x32/000000/FFFFFF?text=MOVA';"
+                />
+            </a>
+            
+            <!-- Botão do menu hamburguer para mobile -->
+            <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-black">
+                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <!-- Navegação para desktop -->
+            <nav class="hidden lg:block">
                 <ul class="flex space-x-6">
-                    <li><a href="/" class="text-gray-700 hover:text-black font-semibold">Início</a></li>
-                    <li><a href="seja-motorista.html" class="text-gray-700 hover:text-black font-semibold">Seja Motorista</a></li>
-                    <li><a href="seja-passageiro.html" class="text-gray-700 hover:text-black font-semibold">Viaje com o Mova</a></li>
-                    <li><a href="#" class="text-gray-700 hover:text-black font-semibold">Contato</a></li>
+                    <li><a href="index.html" class="text-black hover:text-white font-semibold">Início</a></li>
+                    <li><a href="#" class="text-black hover:text-white font-semibold">Seja Motorista</a></li>
+                    <li><a href="seja-passageiro.html" class="text-black hover:text-white font-semibold">Viaje com o Mova</a></li>
+                    <li><a href="contato.html" class="text-black hover:text-white font-semibold">Contato</a></li>
                 </ul>
             </nav>
         </div>
+
+        <!-- Menu de navegação para mobile (oculto por padrão) -->
+        <nav id="mobile-menu" class="mobile-nav-menu flex-col items-center bg-yellow-400 w-full py-4 lg:hidden">
+            <ul class="flex flex-col space-y-4">
+                <li><a href="index.html" class="text-black hover:text-white font-semibold text-lg py-2 block">Início</a></li>
+                <li><a href="#" class="text-black hover:text-white font-semibold text-lg py-2 block">Seja Motorista</a></li>
+                <li><a href="seja-passageiro.html" class="text-black hover:text-white font-semibold text-lg py-2 block">Viaje com o Mova</a></li>
+                <li><a href="contato.html" class="text-black hover:text-white font-semibold text-lg py-2 block">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main class="flex-grow">
-        <!-- Hero Section -->
+        <!-- Hero Section - Seja Motorista -->
         <section class="bg-black text-white py-20 rounded-b-lg">
             <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto text-center">
-                    <h1 class="text-4xl lg:text-6xl font-bold mb-8">
-                        Conquiste a sua liberdade financeira com Mova
-                    </h1>
-                    <p class="text-xl mb-6">
-                        Você só paga a mensalidade, sem repasse de porcentagem.
-                    </p>
-                    <p class="text-lg text-gray-300 mb-8">
-                        Não importa para onde você quer se mover. Vai de Mova!
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Se Mova Section -->
-        <section class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 text-black">
-                        Se Mova!
-                    </h2>
-                    <p class="text-lg text-gray-700 text-center mb-12 leading-relaxed">
-                        Não, não queremos morder parte do que você ganha! O Mova é um app de mobilidade urbana 
-                        que preza pelo melhor custo x benefício em suas corridas e você, motorista Mova, paga 
-                        apenas a mensalidade pelo uso do app e gerencia as suas corridas. Todo o lucro das 
-                        corridas fica 100% com você!
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tipos de Motorista -->
-        <section class="py-16">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 text-black">
-                    Escolha sua Modalidade
-                </h2>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img 
-                            src="https://placehold.co/400x250/FFD700/000000?text=SEJA+MOTORISTA+ECONOMY" 
-                            alt="Seja Motorista Economy" 
-                            class="w-full h-64 object-cover rounded-t-lg"
-                            onerror="this.onerror=null;this.src='https://placehold.co/400x250/FFD700/000000?text=IMAGEM+INDISPON%C3%8DVEL';"
-                        />
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold mb-4">Seja Motorista Economy</h3>
-                            <p class="text-gray-700 mb-6">
-                                Categoria econômica para corridas do dia a dia com veículos compactos e confortáveis.
-                            </p>
-                            <ul class="space-y-2 text-gray-600">
-                                <li>• Veículos categoria popular</li>
-                                <li>• Tarifas acessíveis</li>
-                                <li>• Grande demanda</li>
-                                <li>• Fácil aprovação</li>
-                            </ul>
-                        </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Conteúdo de texto -->
+                    <div class="text-center lg:text-left">
+                        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+                            Conquiste a sua liberdade financeira com Mova
+                        </h1>
+                        <p class="text-xl mb-8">
+                            Você só paga a mensalidade, sem repasse de porcentagem.
+                        </p>
+                        <a 
+                            href="#planos" 
+                            class="bg-yellow-500 text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-400 transition-colors inline-block text-lg shadow-md"
+                        >
+                            Clique aqui para ser um motorista Mova
+                        </a>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <!-- Imagem do bonequinho com sacos de dinheiro - Atualizada -->
+                    <div class="flex justify-center">
                         <img 
-                            src="https://placehold.co/400x250/000000/FFFFFF?text=SEJA+MOTORISTA+PREMIUM" 
-                            alt="Seja Motorista Premium" 
-                            class="w-full h-64 object-cover rounded-t-lg"
-                            onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=IMAGEM+INDISPON%C3%8DVEL';"
+                            src="https://media.discordapp.net/attachments/889631839420043276/1399896373683425372/Ilustra_Liberdade_Financeira.png?ex=688aaa98&is=68895918&hm=2bf15d8beba061d0b5f02192edfedc9ff004276f16509c3226bbd957a591d6c7&=&format=webp&quality=lossless" 
+                            alt="Ilustração de Liberdade Financeira" 
+                            class="w-64 h-64 lg:w-96 lg:h-96 object-contain"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x400/000000/FFFFFF?text=IMAGEM+LIBERDADE';"
                         />
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold mb-4">Seja Motorista Premium</h3>
-                            <p class="text-gray-700 mb-6">
-                                Categoria premium para passageiros que buscam maior conforto e sofisticação.
-                            </p>
-                            <ul class="space-y-2 text-gray-600">
-                                <li>• Veículos categoria executiva</li>
-                                <li>• Tarifas diferenciadas</li>
-                                <li>• Público exigente</li>
-                                <li>• Maior rentabilidade</li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Processo -->
-        <section class="py-16 bg-yellow-400">
+        <!-- Seção de Modalidades (Economy e Premium) - Fundo alterado para preto -->
+        <section class="py-16 bg-black text-white">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 text-black">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Card Seja Motorista Economy -->
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-lg border-2 border-gray-200 text-center text-black">
+                        <div class="flex justify-center mb-4">
+                            <!-- Ícone de dinheiro -->
+                            <svg class="w-16 h-16 text-yellow-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.59c-1.13.55-2.5.91-3.91.91-1.41 0-2.78-.36-3.91-.91-1.13-.55-2.14-1.35-2.9-2.29-.76-.94-1.34-2.07-1.74-3.3C3.5 11.85 3 10.97 3 10c0-1.85.93-3.5 2.4-4.5C6.87 4.5 8.52 4 10 4c1.48 0 3.13.5 4.6 1.5C16.07 6.5 17 8.15 17 10c0 .97-.5 1.85-.91 3.3-.4.94-.98 2.07-1.74 3.3zM12 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Seja Motorista Economy</h3>
+                        <p class="text-lg mb-4">Entenda os requisitos:</p>
+                        <ul class="text-left space-y-2 text-base">
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Requisito para ser motorista economy</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Requisito para ser motorista economy</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Requisito para ser motorista economy</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Requisito para ser motorista economy</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Seja Motorista Premium -->
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-lg border-2 border-gray-200 text-center text-black">
+                        <div class="flex justify-center mb-4">
+                            <!-- Ícone de estrela/troféu -->
+                            <svg class="w-16 h-16 text-yellow-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Seja Motorista Premium</h3>
+                        <p class="text-lg mb-4">Entenda os requisitos:</p>
+                        <ul class="text-left space-y-2 text-base">
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Requisito para ser motorista premium</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Requisito para ser motorista premium</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Requisito para ser motorista premium</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Requisito para ser motorista premium</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Processo - Setas entre os nomes -->
+        <section class="py-16 bg-black text-white text-center">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-12">
                     Entenda o processo para se tornar motorista Mova:
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                    <div class="text-center">
-                        <img 
-                            src="https://placehold.co/150x150/000000/FFFFFF?text=APP+FACIL" 
-                            alt="App Fácil, Rápido e Descomplicado" 
-                            class="mx-auto mb-4 rounded-lg"
-                            onerror="this.onerror=null;this.src='https://placehold.co/150x150/000000/FFFFFF?text=IMAGEM+INDISPON%C3%8DVEL';"
-                        />
-                        <h3 class="text-xl font-bold mb-2 text-black">App Fácil, Rápido e Descomplicado</h3>
-                        <p class="text-black">Interface intuitiva e processo de cadastro simplificado</p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-0 mb-12">
+                    <div class="flex flex-col items-center text-center">
+                        <p class="text-xl font-semibold mb-2">Clique no botão abaixo</p>
+                        <span class="text-yellow-500 text-5xl md:hidden">⬇️</span> <!-- Seta para mobile -->
                     </div>
-                    <div class="text-center">
-                        <img 
-                            src="https://placehold.co/150x150/000000/FFFFFF?text=TELEFONE" 
-                            alt="Contato Telefônico" 
-                            class="mx-auto mb-4 rounded-lg"
-                            onerror="this.onerror=null;this.src='https://placehold.co/150x150/000000/FFFFFF?text=IMAGEM+INDISPON%C3%8DVEL';"
-                        />
-                        <h3 class="text-xl font-bold mb-2 text-black">Suporte Completo</h3>
-                        <p class="text-black">Atendimento personalizado para tirar todas suas dúvidas</p>
-                    </div>
-                    <div class="text-center">
-                        <img 
-                            src="https://placehold.co/150x150/000000/FFFFFF?text=MODALIDADE" 
-                            alt="Defina sua modalidade" 
-                            class="mx-auto mb-4 rounded-lg"
-                            onerror="this.onerror=null;this.src='https://placehold.co/150x150/000000/FFFFFF?text=IMAGEM+INDISPON%C3%8DVEL';"
-                        />
-                        <h3 class="text-xl font-bold mb-2 text-black">Defina e comece</h3>
-                        <p class="text-black">Escolha sua modalidade e comece a ganhar</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    <span class="text-yellow-500 text-5xl mx-4 hidden md:block">➡️</span> <!-- Seta para desktop -->
 
-        <!-- Planos -->
-        <section class="py-16">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl lg:text-4xl font-bold text-center mb-4 text-black">
-                    Motorista, aqui no Mova você não repassa o seu dinheiro das corridas.
-                </h2>
-                <p class="text-center text-lg text-gray-600 mb-12">
-                    Escolha o plano ideal para você:
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                    <div class="bg-white border-2 border-gray-200 rounded-lg p-8 text-center hover:border-yellow-500 transition-colors">
-                        <h3 class="text-2xl font-bold mb-4 text-black">Plano Mensal</h3>
-                        <div class="text-4xl font-bold text-yellow-500 mb-2">R$ 379,90</div>
-                        <p class="text-gray-600 mb-6">Mensalidade</p>
-                        <ul class="space-y-2 text-gray-600 mb-8">
-                            <li>• Sem repasse de porcentagem</li>
-                            <li>• 100% das corridas são suas</li>
-                            <li>• Suporte completo</li>
-                            <li>• Flexibilidade total</li>
-                        </ul>
+                    <div class="flex flex-col items-center text-center">
+                        <p class="text-xl font-semibold mb-2">Baixe o aplicativo</p>
+                        <span class="text-yellow-500 text-5xl md:hidden">⬇️</span> <!-- Seta para mobile -->
                     </div>
-                    <div class="bg-white border-2 border-yellow-500 rounded-lg p-8 text-center relative">
-                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                            <span class="bg-yellow-500 text-black px-6 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
-                                MAIS POPULAR
-                            </span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-black">Plano semestral</h3>
-                        <div class="text-4xl font-bold text-yellow-500 mb-2">R$ 319,00</div>
-                        <p class="text-gray-600 mb-6">Semanal</p>
-                        <ul class="space-y-2 text-gray-600 mb-8">
-                            <li>• Sem repasse de porcentagem</li>
-                            <li>• 100% das corridas são suas</li>
-                            <li>• Suporte completo</li>
-                            <li>• Maior flexibilidade</li>
-                        </ul>
+                    <span class="text-yellow-500 text-5xl mx-4 hidden md:block">➡️</span>
+
+                    <div class="flex flex-col items-center text-center">
+                        <p class="text-xl font-semibold mb-2">Defina a sua modalidade</p>
+                        <span class="text-yellow-500 text-5xl md:hidden">⬇️</span> <!-- Seta para mobile -->
                     </div>
-                    <div class="bg-white border-2 border-gray-200 rounded-lg p-8 text-center hover:border-yellow-500 transition-colors">
-                        <h3 class="text-2xl font-bold mb-4 text-black">Plano Anual</h3>
-                        <div class="text-4xl font-bold text-yellow-500 mb-2">R$ 299,90</div>
-                        <p class="text-gray-600 mb-6">Anual</p>
-                        <ul class="space-y-2 text-gray-600 mb-8">
-                            <li>• Sem repasse de porcentagem</li>
-                            <li>• 100% das corridas são suas</li>
-                            <li>• Suporte completo</li>
-                            <li>• Melhor custo-benefício</li>
-                        </ul>
+                    <span class="text-yellow-500 text-5xl mx-4 hidden md:block">➡️</span>
+
+                    <div class="flex flex-col items-center text-center">
+                        <p class="text-xl font-semibold mb-2">Escolha a sua mensalidade</p>
                     </div>
                 </div>
-                <div class="text-center mt-12">
-                    <button class="bg-yellow-500 text-black px-12 py-4 rounded-lg font-bold text-xl hover:bg-yellow-400 transition-colors">
-                        Clique aqui para ser um motorista Mova
-                    </button>
-                </div>
+                <a 
+                    href="#planos" 
+                    class="bg-yellow-500 text-black px-10 py-4 rounded-lg font-semibold hover:bg-yellow-400 transition-colors inline-block text-xl shadow-md"
+                >
+                    Clique aqui para ser um motorista Mova
+                </a>
             </div>
         </section>
     </main>
 
-<!-- Footer Section -->
-    <!-- Início da seção do rodapé -->
+    <!-- Footer Section - Reutilizado do site principal -->
     <footer class="bg-black text-gray-300 py-8">
-        <!-- Você pode mudar a cor de fundo alterando a classe 'bg-gray-800' acima. Por exemplo: 'bg-black' ou 'bg-blue-900' -->
         <div class="container mx-auto px-4 text-center">
             <!-- Navegação do rodapé -->
             <nav class="mb-8">
@@ -293,7 +263,7 @@
             <!-- Logo Mova no rodapé -->
             <div class="mt-8">
                 <img 
-                    src="Mova_Logotipo_01.png" 
+                    src="imgs/Mova_Logotipo_01.png" 
                     alt="Logo Mova" 
                     class="mx-auto h-12 w-auto rounded-lg"
                     onerror="this.onerror=null;this.src='https://placehold.co/150x50/000000/FFFFFF?text=MOVA+LOGO';"
@@ -304,5 +274,18 @@
     </footer>
     <!-- Fim da seção do rodapé -->
 
+    <script>
+        // JavaScript para o menu hamburguer
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('open');
+                });
+            }
+        });
+    </script>
 </body>
 </html>

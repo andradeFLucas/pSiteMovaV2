@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mova - Quem Somos e Contato</title>
+    <title>Mova - Contato</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Font: Inter -->
@@ -11,287 +11,156 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            padding-top: 64px; /* Adiciona padding ao body para compensar o header fixo */
         }
-        /* Estilo para o modal de mensagem */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
+        /* Estilo para um efeito sutil de "levantar" a imagem */
+        .lift-effect {
+            transform: translateY(-0.5rem); /* Move a imagem ligeiramente para cima */
+            transition: transform 0.3s ease-out; /* Adiciona uma transição suave */
+        }
+        /* Esconde a barra de navegação móvel por padrão */
+        .mobile-nav-menu {
+            display: none;
+        }
+        /* Mostra a barra de navegação móvel quando a classe 'open' está presente */
+        .mobile-nav-menu.open {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-        .modal-overlay.show {
-            opacity: 1;
-            visibility: visible;
-        }
-        .modal-content {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 90%;
-            width: 400px;
-        }
-        .modal-content button {
-            margin-top: 1rem;
-            padding: 0.75rem 1.5rem;
-            background-color: #FBBF24; /* yellow-500 */
-            color: black;
-            font-weight: 600;
-            border-radius: 0.5rem;
-            transition: background-color 0.2s;
-        }
-        .modal-content button:hover {
-            background-color: #FCD34D; /* yellow-400 */
         }
     </style>
+    <link rel="icon" type="image/png" href="imgs/Mova_Icone_02.png">
 </head>
 <body class="min-h-screen flex flex-col">
 
-    <!-- Header Section (Placeholder) -->
-    <header class="bg-white shadow-md py-4">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold text-black">Mova</a>
-            <nav>
+    <!-- Header Section - Reutilizado do site principal -->
+    <header class="bg-yellow-400 shadow-md py-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 flex items-center justify-between lg:justify-between">
+            <!-- Logo Mova (centralizada em mobile, à esquerda em desktop) -->
+            <a href="index.html" class="inline-block flex-grow lg:flex-grow-0 text-center lg:text-left">
+                <img 
+                    src="Mova_Logotipo_02.png" 
+                    alt="Logo Mova" 
+                    class="h-8 w-auto mx-auto lg:mx-0"
+                    onerror="this.onerror=null;this.src='https://placehold.co/100x32/000000/FFFFFF?text=MOVA';"
+                />
+            </a>
+            
+            <!-- Botão do menu hamburguer para mobile -->
+            <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-black">
+                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <!-- Navegação para desktop -->
+            <nav class="hidden lg:block">
                 <ul class="flex space-x-6">
-                    <li><a href="/" class="text-gray-700 hover:text-black font-semibold">Início</a></li>
-                    <li><a href="/seja-motorista" class="text-gray-700 hover:text-black font-semibold">Seja Motorista</a></li>
-                    <li><a href="/seja-passageiro" class="text-gray-700 hover:text-black font-semibold">Viaje com o Mova</a></li>
-                    <li><a href="#" class="text-gray-700 hover:text-black font-semibold">Contato</a></li>
+                    <li><a href="index.html" class="text-black hover:text-white font-semibold">Início</a></li>
+                    <li><a href="seja-motorista.html" class="text-black hover:text-white font-semibold">Seja Motorista</a></li>
+                    <li><a href="seja-passageiro.html" class="text-black hover:text-white font-semibold">Viaje com o Mova</a></li>
+                    <li><a href="#" class="text-black hover:text-white font-semibold">Contato</a></li>
                 </ul>
             </nav>
         </div>
+
+        <!-- Menu de navegação para mobile (oculto por padrão) -->
+        <nav id="mobile-menu" class="mobile-nav-menu flex-col items-center bg-yellow-400 w-full py-4 lg:hidden">
+            <ul class="flex flex-col space-y-4">
+                <li><a href="index.html" class="text-black hover:text-white font-semibold text-lg py-2 block">Início</a></li>
+                <li><a href="seja-motorista.html" class="text-black hover:text-white font-semibold text-lg py-2 block">Seja Motorista</a></li>
+                <li><a href="seja-passageiro.html" class="text-black hover:text-white font-semibold text-lg py-2 block">Viaje com o Mova</a></li>
+                <li><a href="#" class="text-black hover:text-white font-semibold text-lg py-2 block">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main class="flex-grow">
-        <!-- Hero Section -->
-        <section class="bg-gray-50 py-20 rounded-b-lg">
+        <!-- Hero Section - Contato -->
+        <section class="bg-white text-black py-20 rounded-b-lg">
             <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto text-center">
-                    <h1 class="text-4xl lg:text-6xl font-bold mb-8 text-black">
-                        Se Mova!
-                    </h1>
-                    <p class="text-xl text-gray-700 mb-8">
-                        Conheça mais sobre o Mova e faça parte desta revolução na mobilidade urbana.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sobre o Mova -->
-        <section class="py-16">
-            <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 text-black">
-                        Quem Somos
-                    </h2>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                                O Mova é mais que um app de mobilidade urbana. Somos um movimento que acredita 
-                                em um modelo justo e sustentável para motoristas e passageiros.
-                            </p>
-                            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                                Nossa missão é revolucionar o transporte urbano, oferecendo uma alternativa 
-                                onde motoristas ficam com 100% do valor das corridas, pagando apenas uma 
-                                mensalidade fixa pelo uso da plataforma.
-                            </p>
-                            <p class="text-lg text-gray-700 leading-relaxed">
-                                Isso significa tarifas mais justas para passageiros e renda integral para 
-                                motoristas. Todo mundo ganha!
-                            </p>
-                        </div>
-                        <div>
-                            <img 
-                                src="https://placehold.co/500x400/FFD700/000000?text=SOBRE+O+MOVA" 
-                                alt="Sobre o Mova" 
-                                class="rounded-lg shadow-xl"
-                                onerror="this.onerror=null;this.src='https://placehold.co/500x400/FFD700/000000?text=IMAGEM+INDISPON%C3%8DVEL';"
-                            />
-                        </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Conteúdo de texto -->
+                    <div class="text-center lg:text-left">
+                        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+                            Se Mova!
+                        </h1>
+                        <p class="text-xl mb-8">
+                            Não, não queremos ficar com parte dos seus ganhos!
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            O Mova é um app de mobilidade urbana que preza pelo melhor custo x benefício em 
+                            suas corridas e você, motorista Mova, paga apenas a mensalidade pelo uso do app e 
+                            gerencia as suas corridas. Todo o lucro das corridas fica 100% com você!
+                        </p>
+                    </div>
+                    <!-- Imagem ilustrativa -->
+                    <div class="flex justify-center">
+                        <img 
+                            src="https://media.discordapp.net/attachments/889631839420043276/1399902787340341380/Ilustra_Se_Mova.png?ex=688ab091&is=68895f11&hm=553205d44e8e3b38ecf9e4c359d4dbcf369c69d247fb325d754580422ee2601f&=&format=webp&quality=lossless" 
+                            alt="Ilustração Se Mova" 
+                            class="w-64 h-64 lg:w-96 lg:h-96 object-contain"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x400/FFFFFF/000000?text=IMAGEM+INDISPON%C3%8DVEL';"
+                        />
                     </div>
                 </div>
+                <!-- Links de FAQ/Termos/Privacidade -->
+                <div class="mt-12 text-left">
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 mr-2 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <a href="#" class="hover:underline">Perguntas Frequentes (FAQ)</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 mr-2 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <a href="#" class="hover:underline">Termos Gerais de Uso</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 mr-2 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <a href="#" class="hover:underline">Política de Privacidade</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <!-- Nossos Valores -->
-        <section class="py-16 bg-yellow-400">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 text-black">
-                    Nossos Valores
+        <!-- Seção de Contato - Formulário -->
+        <section class="py-16 bg-gray-200 text-black">
+            <div class="container mx-auto px-4 max-w-2xl">
+                <h2 class="text-3xl lg:text-4xl font-bold text-center mb-4">
+                    Manda a boa!
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <div class="text-center">
-                        <div class="bg-black text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                            1
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 text-black">Transparência</h3>
-                        <p class="text-black">
-                            Modelo de negócio claro e justo, sem taxas ocultas ou surpresas.
-                        </p>
-                    </div>
-                    <div class="text-center">
-                        <div class="bg-black text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                            2
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 text-black">Justiça</h3>
-                        <p class="text-black">
-                            Cada pessoa envolvida recebe o que merece pelo seu trabalho.
-                        </p>
-                    </div>
-                    <div class="text-center">
-                        <div class="bg-black text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                            3
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 text-black">Inovação</h3>
-                        <p class="text-black">
-                            Tecnologia a serviço de um modelo mais sustentável e eficiente.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <p class="text-lg text-gray-700 text-center mb-12">
+                    Caso tenha ficado alguma dúvida, não se acanhe, não envie uma mensagem, blz?
+                </p>
 
-        <!-- Contato -->
-        <section class="py-16">
-            <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-center mb-4 text-black">
-                        Manda a boa!
-                    </h2>
-                    <p class="text-center text-lg text-gray-600 mb-12">
-                        Caso tenha ficado alguma dúvida, não se acanhe, nos envie uma mensagem, blz?
-                    </p>
-                    
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        <div>
-                            <img 
-                                src="https://placehold.co/500x400/F3F4F6/6B7280?text=CONTATO+MOVA" 
-                                alt="Entre em Contato" 
-                                class="rounded-lg shadow-lg w-full"
-                                onerror="this.onerror=null;this.src='https://placehold.co/500x400/F3F4F6/6B7280?text=IMAGEM+INDISPON%C3%8DVEL';"
-                            />
-                        </div>
-                        <div>
-                            <form id="contactForm" action="#" method="POST" class="space-y-6">
-                                <div>
-                                    <label for="nome" class="block text-sm font-medium text-gray-700 mb-2">
-                                        Seu nome*
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="nome"
-                                        name="nome"
-                                        required
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
-                                        placeholder="Digite seu nome completo"
-                                    />
-                                </div>
-                                <div>
-                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
-                                        Email*
-                                    </label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        required
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
-                                        placeholder="seu@email.com"
-                                    />
-                                </div>
-                                <div>
-                                    <label for="telefone" class="block text-sm font-medium text-gray-700 mb-2">
-                                        Telefone
-                                    </label>
-                                    <input
-                                        type="tel"
-                                        id="telefone"
-                                        name="telefone"
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
-                                        placeholder="(11) 99999-9999"
-                                    />
-                                </div>
-                                <div>
-                                    <label for="mensagem" class="block text-sm font-medium text-gray-700 mb-2">
-                                        Em que podemos te ajudar?*
-                                    </label>
-                                    <textarea
-                                        id="mensagem"
-                                        name="mensagem"
-                                        required
-                                        rows="4"
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
-                                        placeholder="Digite sua mensagem aqui..."
-                                    ></textarea>
-                                </div>
-                                <button
-                                    type="submit"
-                                    class="w-full bg-yellow-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-colors"
-                                >
-                                    Enviar mensagem
-                                </button>
-                            </form>
-                        </div>
+                <form class="space-y-6">
+                    <div>
+                        <label for="nome" class="block text-lg font-semibold mb-2">Seu nome*</label>
+                        <input type="text" id="nome" name="nome" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Links Úteis -->
-        <section class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto text-center">
-                    <h2 class="text-3xl font-bold mb-8 text-black">
-                        Informações Úteis
-                    </h2>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <a 
-                            href="#" 
-                            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-center"
-                        >
-                            <h3 class="text-xl font-semibold mb-2 text-yellow-600">
-                                ➤ Perguntas Frequentes (FAQ)
-                            </h3>
-                            <p class="text-gray-600">Tire suas principais dúvidas</p>
-                        </a>
-                        <a 
-                            href="#" 
-                            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-center"
-                        >
-                            <h3 class="text-xl font-semibold mb-2 text-yellow-600">
-                                ➤ Termos Gerais de Uso
-                            </h3>
-                            <p class="text-gray-600">Leia nossos termos gerais</p>
-                        </a>
-                        <a 
-                            href="#" 
-                            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-center"
-                        >
-                            <h3 class="text-xl font-semibold mb-2 text-yellow-600">
-                                ➤ Política de Privacidade
-                            </h3>
-                            <p class="text-gray-600">Saiba sobre a política de privacidade</p>
-                        </a>
+                    <div>
+                        <label for="email" class="block text-lg font-semibold mb-2">E-mail*</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
                     </div>
-                </div>
+                    <div>
+                        <label for="telefone" class="block text-lg font-semibold mb-2">Telefone*</label>
+                        <input type="tel" id="telefone" name="telefone" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+                    </div>
+                    <div>
+                        <label for="mensagem" class="block text-lg font-semibold mb-2">Em que podemos te ajudar?</label>
+                        <textarea id="mensagem" name="mensagem" rows="6" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-yellow-500 text-black px-10 py-4 rounded-lg font-semibold hover:bg-yellow-400 transition-colors inline-block text-xl shadow-md">
+                            Enviar mensagem!
+                        </button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
 
-<!-- Footer Section -->
-    <!-- Início da seção do rodapé -->
+    <!-- Footer Section - Reutilizado do site principal -->
     <footer class="bg-black text-gray-300 py-8">
-        <!-- Você pode mudar a cor de fundo alterando a classe 'bg-gray-800' acima. Por exemplo: 'bg-black' ou 'bg-blue-900' -->
         <div class="container mx-auto px-4 text-center">
             <!-- Navegação do rodapé -->
             <nav class="mb-8">
@@ -299,7 +168,7 @@
                     <li><a href="index.html" class="hover:text-white transition-colors">Home</a><span class="ml-6 text-gray-500">|</span></li>
                     <li><a href="quem-somos.html" class="hover:text-white transition-colors">Quem Somos</a><span class="ml-6 text-gray-500">|</span></li>
                     <li><a href="seja-motorista.html" class="hover:text-white transition-colors">Seja Motorista</a><span class="ml-6 text-gray-500">|</span></li>
-                    <li><a href="/seja-passageiro.html" class="hover:text-white transition-colors">Seja Passageiro</a><span class="ml-6 text-gray-500">|</span></li>
+                    <li><a href="seja-passageiro.html" class="hover:text-white transition-colors">Viaje com o Mova</a><span class="ml-6 text-gray-500">|</span></li>
                     <li><a href="index.html" class="hover:text-white transition-colors">Termos de Uso</a><span class="ml-6 text-gray-500">|</span></li>
                     <li><a href="#" class="hover:text-white transition-colors">Privacidade</a><span class="ml-6 text-gray-500">|</span></li>
                     <li><a href="#" class="hover:text-white transition-colors">FAQ</a><span class="ml-6 text-gray-500">|</span></li>
@@ -365,7 +234,7 @@
             <!-- Logo Mova no rodapé -->
             <div class="mt-8">
                 <img 
-                    src="Mova_Logotipo_01.png" 
+                    src="imgs/Mova_Logotipo_01.png" 
                     alt="Logo Mova" 
                     class="mx-auto h-12 w-auto rounded-lg"
                     onerror="this.onerror=null;this.src='https://placehold.co/150x50/000000/FFFFFF?text=MOVA+LOGO';"
@@ -376,42 +245,17 @@
     </footer>
     <!-- Fim da seção do rodapé -->
 
-    <!-- Modal para mensagens -->
-    <div id="messageModal" class="modal-overlay">
-        <div class="modal-content">
-            <p id="modalMessage" class="text-lg font-semibold text-black"></p>
-            <button onclick="document.getElementById('messageModal').classList.remove('show');">Fechar</button>
-        </div>
-    </div>
-
     <script>
-        // Função para mostrar o modal
-        function showMessageModal(message) {
-            const modal = document.getElementById('messageModal');
-            const modalMessage = document.getElementById('modalMessage');
-            modalMessage.textContent = message;
-            modal.classList.add('show');
-        }
+        // JavaScript para o menu hamburguer
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
 
-        // Adiciona o event listener para o formulário
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Previne o comportamento padrão de envio do formulário
-
-            // Coleta os dados do formulário
-            const formData = {
-                nome: document.getElementById('nome').value,
-                email: document.getElementById('email').value,
-                telefone: document.getElementById('telefone').value,
-                mensagem: document.getElementById('mensagem').value
-            };
-
-            console.log('Formulário enviado:', formData);
-
-            // Exibe o modal de sucesso (substituindo o alert)
-            showMessageModal('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-
-            // Limpa o formulário
-            document.getElementById('contactForm').reset();
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('open');
+                });
+            }
         });
     </script>
 </body>
