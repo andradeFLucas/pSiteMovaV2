@@ -82,10 +82,10 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <!-- Conteúdo de texto centralizado -->
                     <div class="text-center lg:text-left">
-                        <h1 class="text-4xl lg:text-6xl font-bold text-black mb-6 rounded-lg">
+                        <h1 class="text-4xl lg:text-6xl font-bold text-black mb-6 rounded-full">
                             Seja motorista Mova e ponha mais dinheiro no bolso!
                         </h1>
-                        <p class="text-xl text-black mb-8 rounded-lg">
+                        <p class="text-xl text-black mb-8 rounded-full">
                             Aqui o motorista é dono do seu próprio negócio.
                         </p>
                     </div>
@@ -145,7 +145,7 @@
                             Baixe o app
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <a href="#" class="inline-flex items-center bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+                            <a href="#" class="inline-flex items-center bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors">
                                 <!-- Placeholder para logo da Apple -->
                                 <img 
                                     src="https://media.discordapp.net/attachments/889631839420043276/1399551903511220245/Logo_Apple_Store.png?ex=688969c8&is=68881848&hm=3ff71d4680efebafd1733c591cab9271d500e2fcb6317f5876320a68f6c6ffdb&=&format=webp&quality=lossless" 
@@ -155,7 +155,7 @@
                                 />
                                 Apple Store
                             </a>
-                            <a href="#" class="inline-flex items-center bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+                            <a href="#" class="inline-flex items-center bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors">
                                 <!-- Placeholder para logo do Google Play (preto e branco) -->
                                 <img 
                                     src="https://media.discordapp.net/attachments/889631839420043276/1399551903737577544/Logo_Play_Store.png?ex=688969c8&is=68881848&hm=b3ae5cf40edef0c27e57f71b7e045e2ea0cc9a3dbfde8fd7d646d9858b096392&=&format=webp&quality=lossless" 
@@ -220,7 +220,7 @@
             </div>
         </section>
 
-        <!-- Pricing Section - Nova 3ª seção baseada na imagem com 4 planos -->
+  <!-- Pricing Section - Nova 3ª seção baseada na imagem com 4 planos -->
         <section class="py-16 bg-white text-black text-center">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl lg:text-4xl font-bold mb-4">
@@ -232,71 +232,96 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                     <!-- Plano Mensal -->
-                    <div class="bg-gray-100 p-8 rounded-lg shadow-lg border-2 border-gray-200">
-                        <h3 class="text-2xl font-bold mb-2">Plano Mensal</h3>
-                        <p class="text-4xl font-extrabold text-yellow-500 mb-4">R$ 379,90</p>
-                        <p class="text-gray-600 mb-6">Mensalidade</p>
-                        <ul class="text-left space-y-2 text-lg">
-                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Sem repasse de porcentagem</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>100% das corridas são suas</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Suporte completo</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Flexibilidade total</li>
-                        </ul>
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-lg border-2 border-gray-200 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Plano Mensal</h3>
+                            <p class="text-4xl font-extrabold text-yellow-500 mb-4">R$ 379,90<span class="text-base font-normal text-gray-600">/Mês</span></p>
+                            <p class="text-gray-600 mb-6">Mensalidade</p>
+                            <ul class="text-left space-y-2 text-lg">
+                                <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Sem repasse de porcentagem</li>
+                                <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>100% das corridas são suas</li>
+                                <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Suporte completo</li>
+                                <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Flexibilidade total</li>
+                            </ul>
+                        </div>
+                        <a 
+                            href="#" 
+                            class="mt-8 bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors inline-block w-full"
+                        >
+                            Quero esse aqui
+                        </a>
                     </div>
 
                     <!-- Plano Trimestral -->
-                    <div class="bg-gray-100 p-8 rounded-lg shadow-lg border-2 border-gray-200">
-                        <h3 class="text-2xl font-bold mb-2">Plano Trimestral</h3>
-                        <p class="text-4xl font-extrabold text-yellow-500 mb-4">R$ 349,90</p>
-                        <p class="text-gray-600 mb-6">Trimestral</p>
-                        <ul class="text-left space-y-2 text-lg">
-                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Sem repasse de porcentagem</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>100% das corridas são suas</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Suporte completo</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Flexibilidade</li>
-                        </ul>
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-lg border-2 border-gray-200 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Plano Trimestral</h3>
+                            <p class="text-4xl font-extrabold text-yellow-500 mb-4">R$ 349,90<span class="text-base font-normal text-gray-600">/Mês</span></p>
+                            <p class="text-gray-600 mb-6">Trimestral</p>
+                            <ul class="text-left space-y-2 text-lg">
+                                <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Sem repasse de porcentagem</li>
+                                <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>100% das corridas são suas</li>
+                                <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Suporte completo</li>
+                                <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Flexibilidade</li>
+                            </ul>
+                        </div>
+                        <a 
+                            href="#" 
+                            class="mt-8 bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors inline-block w-full"
+                        >
+                            Quero esse aqui
+                        </a>
                     </div>
 
                     <!-- Plano Semestral -->
-                    <div class="bg-gray-100 p-8 rounded-lg shadow-lg border-2 border-gray-200">
-                        <h3 class="text-2xl font-bold mb-2">Plano Semestral</h3>
-                        <p class="text-4xl font-extrabold text-yellow-500 mb-4">R$ 319,90</p>
-                        <p class="text-gray-600 mb-6">Semestral</p>
-                        <ul class="text-left space-y-2 text-lg">
-                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Sem repasse de porcentagem</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>100% das corridas são suas</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Suporte completo</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Maior flexibilidade</li>
-                        </ul>
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-lg border-2 border-gray-200 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Plano Semestral</h3>
+                            <p class="text-4xl font-extrabold text-yellow-500 mb-4">R$ 319,90<span class="text-base font-normal text-gray-600">/Mês</span></p>
+                            <p class="text-gray-600 mb-6">Semestral</p>
+                            <ul class="text-left space-y-2 text-lg">
+                                <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Sem repasse de porcentagem</li>
+                                <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>100% das corridas são suas</li>
+                                <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Suporte completo</li>
+                                <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Maior flexibilidade</li>
+                            </ul>
+                        </div>
+                        <a 
+                            href="#" 
+                            class="mt-8 bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors inline-block w-full"
+                        >
+                            Quero esse aqui
+                        </a>
                     </div>
 
                     <!-- Plano Anual (Mais Popular) -->
-                    <div class="bg-black text-white p-8 rounded-lg shadow-lg border-2 border-yellow-500 relative">
-                        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-500 text-black text-sm font-bold px-4 py-1 rounded-full uppercase">Mais Popular</span>
-                        <h3 class="text-2xl font-bold mb-2">Plano Anual</h3>
-                        <p class="text-4xl font-extrabold text-yellow-500 mb-4">R$ 299,90</p>
-                        <p class="text-gray-300 mb-6">Anual</p>
-                        <ul class="text-left space-y-2 text-lg">
-                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Sem repasse de porcentagem</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>100% das corridas são suas</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Melhor custo-benefício</li>
-                        </ul>
+                    <div class="bg-black text-white p-8 rounded-lg shadow-lg border-2 border-yellow-500 relative flex flex-col justify-between">
+                        <div>
+                            <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-500 text-black text-sm font-bold px-4 py-1 rounded-full uppercase">Mais Popular</span>
+                            <h3 class="text-2xl font-bold mb-2">Plano Anual</h3>
+                            <p class="text-4xl font-extrabold text-yellow-500 mb-4">R$ 299,90<span class="text-base font-normal text-gray-300">/Mês</span></p>
+                            <p class="text-gray-300 mb-6">Anual</p>
+                            <ul class="text-left space-y-2 text-lg">
+                                <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Sem repasse de porcentagem</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>100% das corridas são suas</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Melhor custo-benefício</li>
+                            </ul>
+                        </div>
+                        <a 
+                            href="#" 
+                            class="mt-8 bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors inline-block w-full"
+                        >
+                            Quero esse aqui
+                        </a>
                     </div>
                 </div>
 
                 <!-- Disclaimer Text -->
                 <p class="text-sm text-gray-700 mt-8 mb-12 max-w-2xl mx-auto leading-relaxed">
-                   *O valor da mensalidade permite acesso total ao app. Todo o lucro das corridas é 100% do motorista. 
+                    O valor da mensalidade permite acesso total ao app. Todo o lucro das corridas é 100% do motorista. 
                     Custos bancários ou de plataformas de pagamento podem ser aplicados conforme política dos respectivos serviços financeiros.
                 </p>
-
-                <!-- Main Button -->
-                <a 
-                    href="/seja-motorista" 
-                    class="bg-yellow-500 text-black px-10 py-4 rounded-lg font-semibold hover:bg-yellow-400 transition-colors inline-block text-xl shadow-md"
-                >
-                    Clique aqui para ser um motorista Mova
-                </a>
+                <!-- O botão principal "Clique aqui para ser um motorista Mova" foi removido daqui -->
             </div>
         </section>
     </main>
@@ -328,7 +353,7 @@
                         <img 
                             src="https://placehold.co/30x30/000000/FFFFFF?text=🍎" 
                             alt="App Store" 
-                            class="w-8 h-8 hover:opacity-80 transition-opacity rounded-lg"
+                            class="w-8 h-8 hover:opacity-80 transition-opacity rounded-full"
                             onerror="this.onerror=null;this.src='https://placehold.co/30x30/000000/FFFFFF?text=APP';"
                         />
                     </a>
@@ -336,7 +361,7 @@
                         <img 
                             src="https://placehold.co/30x30/000000/FFFFFF?text=▶" 
                             alt="Google Play" 
-                            class="w-8 h-8 hover:opacity-80 transition-opacity rounded-lg"
+                            class="w-8 h-8 hover:opacity-80 transition-opacity rounded-full"
                             onerror="this.onerror=null;this.src='https://placehold.co/30x30/000000/FFFFFF?text=PLAY';"
                         />
                     </a>
@@ -349,7 +374,7 @@
                         <img 
                             src="https://placehold.co/30x30/000000/FFFFFF?text=📷" 
                             alt="Instagram" 
-                            class="w-8 h-8 hover:opacity-80 transition-opacity rounded-lg"
+                            class="w-8 h-8 hover:opacity-80 transition-opacity rounded-full"
                             onerror="this.onerror=null;this.src='https://placehold.co/30x30/000000/FFFFFF?text=INSTA';"
                         />
                     </a>
@@ -357,7 +382,7 @@
                         <img 
                             src="https://placehold.co/30x30/000000/FFFFFF?text=👍" 
                             alt="Facebook" 
-                            class="w-8 h-8 hover:opacity-80 transition-opacity rounded-lg"
+                            class="w-8 h-8 hover:opacity-80 transition-opacity rounded-full"
                             onerror="this.onerror=null;this.src='https://placehold.co/30x30/000000/FFFFFF?text=FACE';"
                         />
                     </a>
@@ -365,7 +390,7 @@
                         <img 
                             src="https://placehold.co/30x30/000000/FFFFFF?text=🔗" 
                             alt="LinkedIn" 
-                            class="w-8 h-8 hover:opacity-80 transition-opacity rounded-lg"
+                            class="w-8 h-8 hover:opacity-80 transition-opacity rounded-full"
                             onerror="this.onerror=null;this.src='https://placehold.co/30x30/000000/FFFFFF?text=LINK';"
                         />
                     </a>
@@ -380,7 +405,7 @@
                 <img 
                     src="imgs/Mova_Logotipo_01.png" 
                     alt="Logo Mova" 
-                    class="mx-auto h-12 w-auto rounded-lg"
+                    class="mx-auto h-12 w-auto rounded-full"
                     onerror="this.onerror=null;this.src='https://placehold.co/150x50/000000/FFFFFF?text=MOVA+LOGO';"
                 />
                 <!-- Você pode mudar a cor da fonte alterando a classe 'text-gray-300' na tag 'footer' ou diretamente nas tags de texto dentro do rodapé. Por exemplo: 'text-white' ou 'text-yellow-400' -->
