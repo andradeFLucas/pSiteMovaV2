@@ -33,7 +33,7 @@
 </head>
 <body class="min-h-screen flex flex-col">
 
-    <!-- Header Section - Reutilizado do site principal -->
+        <!-- Header Section - Ajustado para ser responsivo e fixo -->
     <header class="bg-yellow-400 shadow-md py-4 fixed w-full top-0 z-50">
         <div class="container mx-auto px-4 flex items-center justify-between lg:justify-between">
             <!-- Logo Mova (centralizada em mobile, à esquerda em desktop) -->
@@ -55,11 +55,16 @@
 
             <!-- Navegação para desktop -->
             <nav class="hidden lg:block">
-                <ul class="flex space-x-6">
-                    <li><a href="index.html" class="text-black hover:text-white font-semibold">Início</a></li>
+                <ul class="flex space-x-6 items-center">
+                    <li>
+                        <a href="https://www.instagram.com/mova.app.br/" class="bg-black text-yellow-400 px-4 py-2 rounded-full font-semibold hover:bg-gray-800 transition-colors">
+                            BAIXE O APP
+                        </a>
+                    </li>
+                    <li><a href="#" class="text-black hover:text-white font-semibold">Início</a></li>
                     <li><a href="seja-motorista.html" class="text-black hover:text-white font-semibold">Seja Motorista</a></li>
                     <li><a href="seja-passageiro.html" class="text-black hover:text-white font-semibold">Viaje com o Mova</a></li>
-                    <li><a href="#" class="text-black hover:text-white font-semibold">Contato</a></li>
+                    <li><a href="contato.html" class="text-black hover:text-white font-semibold">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -67,10 +72,11 @@
         <!-- Menu de navegação para mobile (oculto por padrão) -->
         <nav id="mobile-menu" class="mobile-nav-menu flex-col items-center bg-yellow-400 w-full py-4 lg:hidden">
             <ul class="flex flex-col space-y-4">
-                <li><a href="index.html" class="text-black hover:text-white font-semibold text-lg py-2 block">Início</a></li>
+                <li><a href="#" class="text-black hover:text-white font-semibold text-lg py-2 block">BAIXE O APP</a></li>
+                <li><a href="#" class="text-black hover:text-white font-semibold text-lg py-2 block">Início</a></li>
                 <li><a href="seja-motorista.html" class="text-black hover:text-white font-semibold text-lg py-2 block">Seja Motorista</a></li>
                 <li><a href="seja-passageiro.html" class="text-black hover:text-white font-semibold text-lg py-2 block">Viaje com o Mova</a></li>
-                <li><a href="#" class="text-black hover:text-white font-semibold text-lg py-2 block">Contato</a></li>
+                <li><a href="contato.html" class="text-black hover:text-white font-semibold text-lg py-2 block">Contato</a></li>
             </ul>
         </nav>
     </header>
