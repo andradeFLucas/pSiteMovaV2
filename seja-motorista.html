@@ -111,36 +111,50 @@
         <!-- Seção de Modalidades (Economy e Premium) - Fundo alterado para preto -->
         <section class="py-16 bg-black text-white">
             <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <!-- Card Seja Motorista Economy -->
-                    <div class="bg-gray-100 p-8 rounded-lg shadow-lg border-2 border-gray-200 text-center text-black">
-                        <div class="flex justify-center mb-4">
-                            <!-- Ícone de dinheiro -->
-                            <img src="img/Ilustra_Seja_Economy.png" style="width: 64px; height: 64px;" alt="Ícone" />
+                <h2 class="text-3xl lg:text-4xl font-bold mb-12 text-center">
+                    Escolha a sua categoria de motorista:
+                </h2>
+                <div class="flex flex-col md:flex-row justify-center items-stretch gap-12">
+                    <!-- Card Seja Motorista Mova de Boa -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-black text-left text-black ring-2 ring-inset ring-yellow-400">
+                        <div class="flex items-center gap-4 mb-4">
+<!--                     Ícone de dinheiro (PNG) -->
+                            <div class="rounded-full flex-shrink-0 w-16 h-16 flex items-center justify-center">
+                                <img src="img/Ilustra_Seja_Economy.png" alt="Ícone Mova de Boa" class="w-12 h-12" onerror="this.onerror=null;this.src='https://placehold.co/48x48/000000/FFFFFF?text=R$';" />
+                            </div>
+                            <h3 class="text-2xl font-bold">Seja Motorista Mova de Boa</h3>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">Seja Motorista Economy</h3>
-                        <p class="text-lg mb-4">Entenda os requisitos:</p>
+                        <p class="text-lg mb-4 font-semibold">Entenda os requisitos mínimos:</p>
                         <ul class="text-left space-y-2 text-base">
-                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Requisito para ser motorista economy</li>
-                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Requisito para ser motorista economy</li>
-                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Requisito para ser motorista economy</li>
-                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Requisito para ser motorista economy</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Motorização: qualquer tipo de motor (flex ou GNV, desde que regularizado)</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Ano de fabricação: até 10 anos de uso</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Carroceria: hatch ou sedan compacto</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Conforto mínimo: ar-condicionado, direção hidráulica ou elétrica, vidros e travas elétricas</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Estado de conservação: bom estado geral (sem amassados graves, pintura descascando ou mau cheiro)</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Segurança: 4 portas, cinto de segurança para todos os ocupantes, airbags e freios em bom funcionamento</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Outros: documentação em dia, inspeção veicular aprovada</li>
                         </ul>
                     </div>
 
-                    <!-- Card Seja Motorista Premium -->
-                    <div class="bg-gray-100 p-8 rounded-lg shadow-lg border-2 border-gray-200 text-center text-black">
-                        <div class="flex justify-center mb-4">
-                            <!-- Ícone de estrela/troféu -->
-                            <img src="img/Seja-Premium.png" style="width: 64px; height: 64px;" alt="Ícone" />
+                    <!-- Card Seja Motorista Mova de Nave -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-black text-left text-black ring-2 ring-inset ring-yellow-400">
+                        <div class="flex items-center gap-4 mb-4">
+                            <!-- Ícone de estrela/troféu (SVG) -->
+                            <div class="rounded-full flex-shrink-0 w-16 h-16 flex items-center justify-center">
+                                <img src="img/Mova_deNave.png" alt="Ícone Mova de Boa" class="w-12 h-12" onerror="this.onerror=null;this.src='https://placehold.co/48x48/000000/FFFFFF?text=R$';" />
+                            </div>
+                            <h3 class="text-2xl font-bold">Seja Motorista Mova de Nave</h3>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">Seja Motorista Premium</h3>
-                        <p class="text-lg mb-4">Entenda os requisitos:</p>
+                        <p class="text-lg mb-4 font-semibold">Entenda os requisitos mínimos:</p>
                         <ul class="text-left space-y-2 text-base">
-                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Requisito para ser motorista premium</li>
-                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Requisito para ser motorista premium</li>
-                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Requisito para ser motorista premium</li>
-                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Requisito para ser motorista premium</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Motorização: acima de 1.6 (flex, hibrido ou elétrico)</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Ano de fabricação: até 5 anos de uso</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Carroceria: sedan médio/grande, SUV compacto/médio ou veículos híbridos/elétricos</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Conforto extra: ar-condicionado digital ou climatizador, bancos em couro ou tecido premium, espaço amplo para pernas</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Acabamento: interior bem conservado, silencioso e limpo</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Tecnologia: sistema multimídia, conectividade de Bluetooth, entrada USB para passageiros</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Segurança: controle de estabilidade (ESP), freios ABS, múltiplos airbags, faróis em bom estado</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Outros: documentação em dia, inspeção veicular aprovada</li>
                         </ul>
                     </div>
                 </div>
